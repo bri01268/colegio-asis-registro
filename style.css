@@ -12,7 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #007bff;
+  background: #821616;
   padding: 10px 20px;
   border-radius: 0;
   position: relative;
@@ -20,6 +20,13 @@ body {
   overflow: visible;
   flex-wrap: wrap;
   color: white;
+}
+.nombre-colegio {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
 }
 
 /* 🔹 LOGO DEL MENÚ */
