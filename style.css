@@ -6,7 +6,20 @@ body {
   padding: 0;
   justify-content: center;
 }
-
+/* Fondo con transparencia */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/fondo.jpg"); /* Cambia por la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /*  Ajusta la transparencia: 0.1 (más transparente) → 1 (sin transparencia) */
+  z-index: -1; /*  Mantiene el fondo detrás del contenido */
+}
 /* 🟦 MENÚ SUPERIOR */
 .menu {
   display: flex;
@@ -102,7 +115,7 @@ body {
 .login-logo {
   display: block;
   margin: 0 auto 20px auto;
-  max-width: 200px;
+  max-width: 120px;
   height: auto;
   border-radius: 10px;
   background: transparent;
