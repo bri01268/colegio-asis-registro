@@ -153,6 +153,8 @@ body::before {
   background: #0056b3;
 }
 
+
+
 /*  Oculta el panel hasta logueo */
 #contenido {
   display: none; /* Oculto por defecto */

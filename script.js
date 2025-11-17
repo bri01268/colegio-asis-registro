@@ -22,10 +22,24 @@ function iniciarSesion() {
 
 // Logout
 document.getElementById("btnLogout").addEventListener("click", () => {
+  
+  // Mostrar login y ocultar contenido
   document.getElementById("contenido").style.display = "none";
   document.getElementById("login").style.display = "block";
+
+  // Ocultar formularios
+  document.getElementById("form-psico").style.display = "none";
+  document.getElementById("form-derivacion").style.display = "none";
+
+  // Limpiar campos
   document.getElementById("usuario").value = "";
   document.getElementById("clave").value = "";
+
+  // Volver al inicio de la página
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+
 });
 
 
