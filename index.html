@@ -41,7 +41,7 @@
     <div id="panel-principal">
       <!-- FICHA PSICOPEDAGÓGICA -->
       <div id="form-psico" class="card" style="display:none;">
-        <h2>Ficha Psicopedagógica</h2>
+        <h2 class="titulo-psi">Ficha Psicopedagógica</h2>
         <form id="form-psico-data" onsubmit="submitForm(event,'FICHA_PSICOPEDAGOGICA')">
 
     <!-- =========================== -->
@@ -364,7 +364,7 @@
   <!-- FICHA DE DERIVACIÓN 2025  -->
   <!-- ========================= -->
   <div id="form-derivacion" class="card" style="display: none;">
-    <h2>Ficha de Derivación</h2>
+    <h2 class="titulo-dev">Ficha de Derivación</h2>
     <div class="linea">
       <label>APELLIDOS Y NOMBRES:</label>
       <input name="apellidos_nombres" class="line-input">
@@ -459,17 +459,15 @@
       <!-- ========================= -->
       <!-- SOLO UN BOTÓN -->
       <!-- ========================= -->
-       <button type="button" class="btn-excel" onclick="exportarExcel('form-derivacion', 'Ficha_Derivacion_2025')">Descargar</button>
-       <div class="nav-buttons-right">
-      <button class="btn" type="submit" onclick="guardarFicha('derivacion')">Guardar Ficha de Derivación</button>
+       
+      <div class="btn-container">
+        <button type="button" class="btn-excel" onclick="exportarExcel('form-derivacion', 'Ficha_Derivacion_2025')">Descargar</button>
+        <button class="btn" type="submit" onclick="guardarFicha('derivacion')">Guardar Ficha de Derivación</button>
       </div>
     </form>
     
   </div>
 </div>
-
-
-
 <script src="script.js"></script>
 </body>
 </html>
