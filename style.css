@@ -322,12 +322,6 @@ body::before {
   background-clip: text;
   color: transparent;
 
-  /* Reflejo debajo del texto */
-  -webkit-box-reflect: below 2px 
-      linear-gradient(transparent, rgba(255, 8, 8, 0.297));
-
-  margin-bottom: 50px;
-  letter-spacing: 1px;
   
 }
 
