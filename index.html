@@ -352,13 +352,21 @@
 <div class="nav-buttons">
   <button type="button" class="btn" onclick="prevStep()">Anterior</button>
   <button type="button" class="btn" onclick="nextStep()">Siguiente</button>
-  <button type="button" class="btn" id="submitBtn" style="display:none;" onclick="guardarFicha('psico', event)">Guardar Ficha Psicopedagógica</button>
+  <!-- CENTRO: GUARDAR -->
+  <button type="button" class="btn" 
+          id="submitBtn" 
+          style="display:none; margin: 0 auto;" 
+          onclick="guardarFicha('psico', event)">
+      Guardar Ficha Psicopedagógica
+  </button>
+
+  <!-- DERECHA: DESCARGAR -->
   <button type="button" class="btn-excel" 
-        id="btnExcelPsico" 
-        style="display:none;" 
-        onclick="exportarExcel('form-psico-data', 'Ficha_Psicopedagogica')">
-  Descargar
-</button>
+          id="btnExcelPsico" 
+          style="display:none;" 
+          onclick="exportarExcel('form-psico-data', 'Ficha_Psicopedagogica')">
+      Descargar
+  </button>
 
 
 </div>
@@ -473,13 +481,15 @@
        
       <div class="btn-container">
         <button type="button" class="btn-excel" onclick="exportarExcel('form-derivacion', 'Ficha_Derivacion_2025')">Descargar</button>
-        <button class="btn" type="button" onclick="guardarFicha('derivacion', event)">Guardar Ficha de Derivación</button>
+        <button class="btn" type="button" onclick="guardarFicha('derivacion', event)">Guardar</button>
 
       </div>
     </form>
     
   </div>
 </div>
+<div id="toastMsg" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

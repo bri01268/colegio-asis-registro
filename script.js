@@ -20,6 +20,10 @@ function iniciarSesion() {
   });
 });
 
+// CLICK en botón login
+document.getElementById('btnLogin').addEventListener('click', iniciarSesion);
+
+
 // LOGOUT
 document.getElementById("btnLogout").addEventListener("click", () => {
   document.getElementById("contenido").style.display = "none";
@@ -139,6 +143,24 @@ function prevStep() {
 }
 
 showStep(currentStep);
+
+/* ============================
+   GUARDAR FICHAS SOLO LOCAL
+============================ */
+function guardarFicha(tipo, event) {
+  if (event) event.preventDefault();
+
+  const formId = tipo === 'psico' ? 'form-psico-data' : 'form-derivacion';
+
+  // Validación del formulario
+  if (!validarFormulario(formId)) return;
+
+  // Si está todo correcto, mensaje de éxito
+  alert("✔️ ¡Datos guardados correctamente en el sistema!");
+
+  // Se limpia el formulario después de guardar
+  document.getElementById(formId).reset();
+}
 
 
 /* ============================

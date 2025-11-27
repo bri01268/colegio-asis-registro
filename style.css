@@ -305,11 +305,19 @@ body::before {
 .step.active { display: block; }
 
 .nav-buttons {
+  width: 100%;
   display: flex;
-  justify-content: space-between; /* distribuye botones: izquierda ↔ derecha */
+  justify-content: space-between;
   align-items: center;
   margin-top: 25px;
 }
+
+#submitBtn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 .nav-buttons-right {
   display: flex;
