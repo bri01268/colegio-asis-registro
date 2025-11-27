@@ -9,15 +9,19 @@
 </head>
 <body>
   <!-- 🔒 LOGIN -->
-  <div id="login" class="login-container">
-    <div class="login-card">
-      <img src="img/logo.png" class="login-logo">
-      <h2>Iniciar Sesión</h2>
+<div id="login" class="login-container">
+  <div class="login-box">
+      <img src="img/logo.png" class="logo-login" alt="Logo colegio">
+      <h2 class="titulo-login">Iniciar Sesión</h2>
+
       <input type="text" id="usuario" placeholder="Usuario" required>
       <input type="password" id="clave" placeholder="Contraseña" required>
-      <button onclick="iniciarSesion()">Ingresar</button>
-    </div>
+
+      <button id="btnLogin">Ingresar</button>
+      <p id="errorLogin"></p>
   </div>
+</div>
+
 
   <!-- 🔓 CONTENIDO -->
   <div id="contenido" style="display: none;">
@@ -348,8 +352,15 @@
 <div class="nav-buttons">
   <button type="button" class="btn" onclick="prevStep()">Anterior</button>
   <button type="button" class="btn" onclick="nextStep()">Siguiente</button>
-  <button type="button" class="btn" id="submitBtn" style="display:none;" onclick="guardarFicha('psico, event')">Guardar Ficha Psicopedagógica</button>
-  <button type="button" class="btn-excel" id="btnExcelPsico" style="display:none;" onclick="exportarExcel('form-psico', 'Ficha_Psicopedagogica')">Descargar</button>
+  <button type="button" class="btn" id="submitBtn" style="display:none;" onclick="guardarFicha('psico', event)">Guardar Ficha Psicopedagógica</button>
+  <button type="button" class="btn-excel" 
+        id="btnExcelPsico" 
+        style="display:none;" 
+        onclick="exportarExcel('form-psico-data', 'Ficha_Psicopedagogica')">
+  Descargar
+</button>
+
+
 </div>
 
 
@@ -462,7 +473,8 @@
        
       <div class="btn-container">
         <button type="button" class="btn-excel" onclick="exportarExcel('form-derivacion', 'Ficha_Derivacion_2025')">Descargar</button>
-        <button class="btn" type="button" onclick="guardarFicha('derivacion, event')">Guardar Ficha de Derivación</button>
+        <button class="btn" type="button" onclick="guardarFicha('derivacion', event)">Guardar Ficha de Derivación</button>
+
       </div>
     </form>
     
