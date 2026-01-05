@@ -109,8 +109,12 @@ function exportarExcel(formId, nombreArchivo) {
 
   XLSX.writeFile(wb, nombreArchivo + ".xlsx");
 
-  alert("📥 ¡Descarga completada!");
+  // 🔹 LIMPIEZA DEL FORMULARIO
+  form.reset();
+
+  alert("📥 Descarga completada y formulario limpiado correctamente");
 }
+
 
 
 /* ============================
